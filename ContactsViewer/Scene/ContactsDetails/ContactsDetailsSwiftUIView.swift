@@ -11,7 +11,11 @@ struct ContactsDetailsSwiftUIView: View {
     let contact : Contact
     
     var body: some View {
-        Text(contact.firstName)
+        VStack{
+            ProfileViewComponent(imageURL: contact.pictureURL, name: "\(contact.firstName) \(contact.lastName)")
+            ActionsListComponent()
+            VerticalItensListComponents()
+        }
     }
 }
 
